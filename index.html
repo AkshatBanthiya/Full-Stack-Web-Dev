@@ -12,41 +12,33 @@
       box-sizing: border-box;
       margin: 4px;
     }
-    h2{
-      padding: 5px;
-      color: azure;
-      background-color: burlywood;
+    div.child{
+      background-color: yellow;
+      height: 100px;
+      width: 150px;
+      border-radius: 50%;
+      transition-duration: 1s;
+      transition-timing-function: linear;
     }
-    h2:hover{
-      background-color: cadetblue;
-      cursor: pointer;
+    div.parent{
+      background-color: #111;
+      min-height: 250px;
     }
-    div::selection{
-      background-color: cornflowerblue;
+    div.parent:hover div.child{ 
+      background-color: red;
+      /* transform: rotateY(180deg); */
+      /* transform: rotateZ(90deg); */
+      /* transform: scale(0.4);  */
+      transform: translateX(500px);
     }
-    input :focus{
-      background-color: darkblue;
-    }
-    h2::after{
-      content: "i am after";
-      font-size: 1rem;
-      font-style: oblique;
-      color: darkred;
-      word-spacing: 01em;
-    }
-    h2::before{
-      content: "i am before";
-      font-size: 1rem;
-      font-style: oblique;
-      color: moccasin;
-    }
+    
   </style>
 </head>
 <body>
   <div>
-  <h2>I a'm an H2</h2>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet magnam fuga, ratione asperiores ad ut aliquid? Temporibus enim eius quibusdam!
-  <input type="text">
+  <div class="parent">
+    <div class="child"></div>
+  </div>
 </div>
 
 </body>
