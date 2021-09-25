@@ -7,56 +7,47 @@
   <title>CSS</title>
   <style>
     *{
-      padding: 0;
       margin: 0;
+      padding: 0;
       box-sizing: border-box;
+      margin: 4px;
     }
-    .parent{
-      min-height: 250px;
-      background-color: black;
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
+    h2{
+      padding: 5px;
+      color: azure;
+      background-color: burlywood;
     }
-    .child{
-      width: 100px;
-      height: 150px;
-      background: hsla(339, 100%, 55%, 1);
-      background: linear-gradient(180deg, hsla(339, 100%, 55%, 1) 23%, hsla(197, 100%, 64%, 1) 100%);
-      background: -moz-linear-gradient(180deg, hsla(339, 100%, 55%, 1) 23%, hsla(197, 100%, 64%, 1) 100%);
-      background: -webkit-linear-gradient(180deg, hsla(339, 100%, 55%, 1) 23%, hsla(197, 100%, 64%, 1) 100%);
-      filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ff1b6b", endColorstr="#45caff", GradientType=1 );
-      margin: 10px;
+    h2:hover{
+      background-color: cadetblue;
+      cursor: pointer;
+    }
+    div::selection{
+      background-color: cornflowerblue;
+    }
+    input :focus{
+      background-color: darkblue;
+    }
+    h2::after{
+      content: "i am after";
+      font-size: 1rem;
+      font-style: oblique;
+      color: darkred;
+      word-spacing: 01em;
+    }
+    h2::before{
+      content: "i am before";
+      font-size: 1rem;
+      font-style: oblique;
+      color: moccasin;
     }
   </style>
 </head>
 <body>
-  <div class="parent">
-    <div class="child"></div>
-    <div style="background-color: orangered;" class="child"></div>
-    <div style="background-color: orchid;" class="child"></div>
-    <div class="child"></div>
-    <div style="background-color: orangered;" class="child"></div>
-    <div style="background-color: orchid;" class="child"></div>
-    <div class="child"></div>
-    <div style="background-color: orangered;" class="child"></div>
-    <div style="background-color: orchid;" class="child"></div>
-    <div class="child"></div>
-    <div style="background-color: orangered;" class="child"></div>
-    <div style="background-color: orchid;" class="child"></div>
-    <div class="child"></div>
-    <div style="background-color: orangered;" class="child"></div>
-    <div style="background-color: orchid;" class="child"></div>
-    <div class="child"></div>
-    <div style="background-color: orangered;" class="child"></div>
-    <div style="background-color: orchid;" class="child"></div>
-    <div class="child"></div>
-    <div style="background-color: orangered;" class="child"></div>
-    <div style="background-color: orchid;" class="child"></div>
-  </div>
-  
+  <div>
+  <h2>I a'm an H2</h2>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet magnam fuga, ratione asperiores ad ut aliquid? Temporibus enim eius quibusdam!
+  <input type="text">
+</div>
+
 </body>
 </html>
