@@ -1,4 +1,14 @@
-var heading = document.getElementById('heading')
-var para= document.getElementsByClassName("para")
-var tags= document.getElementsByTagName("a")
-var query= document.querySelector("#heading")
+var list = document.querySelector('ul')
+
+
+var arr = ['Go the GYM ', 'cook oatmeal', 'Eat']
+
+arr.push('Complete the assignment')
+
+for (var i = 0; i < arr.length; i++) {
+    var element = document.createElement('li')
+    var textNode = document.createTextNode(arr[i])
+    element.appendChild(textNode)
+    list.appendChild(element)
+
+}
