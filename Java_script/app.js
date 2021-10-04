@@ -1,33 +1,35 @@
-
- var list = document.querySelector('ul')
- // function greet(name = 'John', age = 99) {
- //     // console.log('Hello')
- //     console.log(name, age)
- //     // console.log('Hey ' + name + " Your age is " + age)/
- // }
-
- // greet()
-
- var arr = ['Go the GYM ', 'cook oatmeal', 'Eat']
-
- arr.push('Complete the assignment')
-
- for (var i = 0; i < arr.length; i++) {
-     var element = document.createElement('li')
-     var textNode = document.createTextNode(arr[i])
-     element.appendChild(textNode)
-     list.appendChild(element)
- // function add(a = 0, b = 0) {
- //     var sum = a + b
- //     return sum
- // }
-
- } 
- var add = (a = 0, b = 0) => {
-     var sum = a + b
-     return sum
- }
+const a = document.querySelectorAll("input")[0];
+const b = document.querySelectorAll("input")[1];
+const add = document.getElementById("add");
+const multiply = document.getElementById("multiply");
+const subract = document.getElementById("subract");
+const result = document.querySelector(".result");
 
 
 
- console.log(add(10, 20))
+// Calculate
+const calculate = (operation) => {
+  switch (operation) {
+    case "add":
+      result.innerHTML = parseInt(a.value) + parseInt(b.value);
+      break;
+    case "multiply":
+      result.innerHTML = parseInt(a.value) * parseInt(b.value);
+      break;
+    case "subract":
+      result.innerHTML = parseInt(a.value) - parseInt(b.value);
+      break;
+    default:
+      result.innerHTML = "Not a valid operation";
+  }
+};
+
+add.addEventListener("click", () => {
+  return calculate("add");
+});
+multiply.addEventListener("click", () => {
+  return calculate("multiply");
+});
+subract.addEventListener("click", () => {
+  return calculate("subract");
+});
